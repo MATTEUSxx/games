@@ -26,6 +26,10 @@ public class Plataforma {
     @ManyToMany(mappedBy = "Plataformas")
     private Set<Jogo> jogos = new HashSet<>();
 
+    public Plataforma(Set<Jogo> jogos) {
+        this.jogos = jogos;
+    }
+
     public Long getId() {
         return id;
     }
