@@ -8,13 +8,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-
 import java.util.HashSet;
 import java.util.Set;
 
 
 @Entity
-@Table(name = "plataformas")
+@Table(name = "Plataformas")
 public class Plataforma {
 
     @Id
@@ -24,7 +23,7 @@ public class Plataforma {
     @Column(unique = true, nullable = false)
     private String nome;
 
-    @ManyToMany(mappedBy = "plataformas")
+    @ManyToMany(mappedBy = "Plataformas")
     private Set<Jogo> jogos = new HashSet<>();
 
     public Long getId() {
